@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="Restaurante, Japonês, Delivery, Sushi, Temaki, ">
+    <meta name="description" content="Faça já seu pedido na Dragon Sushi! Confira nossos pratos, ofertas e muito mais!">
+    <meta name="author" content="Gabriel S. Evangelista, Henrique R. Pereira, Guilherme Ferreira, Gustavo Basilio, Maria Eduarda G. Lima, Guilherme Lemes">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!--
+        Fonts: Montserrat, Roboto and Patua One
+        font-family: 'Montserrat', sans-serif;
+          - Font weight: 300, 400, 600 and 700
+        font-family: 'Roboto', sans-serif;
+          - Font weight: 300, 400 and 700
+        font-family: 'Patua One', cursive;
+          - Font weight: 400
+        font-family: 'Open Sans', sans-serif;
+          - Font weight: 300, 400 and 700
+    -->
+
+    <script defer src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    <script defer src="js/script.js"></script>
+
+    <title>Dragon Sushi - Restaurante Japonês</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/style.css")
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+    <header class=" header">
+        <div class="container">
+            <div class="header__logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="header__container-menu-icon">
+                <div class="header__search-bar-icon">
+                    <iconify-icon class="iconify-icon" icon="eva:search-fill"></iconify-icon>
+                </div>
+                <div class="header__mobile-menu">
+                    <div class="header__mobile-menu__line-one"></div>
+                    <div class="header__mobile-menu__line-two"></div>
+                    <div class="header__mobile-menu__line-three"></div>
+                </div>
+            </div>
+            <nav class="header__navigation-menu">
+                <ul class="header__navigation-menu__list">
+                    <div class="header__navigation-menu__list__links">
+                    <li class="header__navigation-menu__list__links__item"><a href="#">Home</a></li>
+                    <li class="header__navigation-menu__list__links__item"><a href="#cardapio">Cardápio</a></li>
+                    <li class="header__navigation-menu__list__links__item"><a href="#quem-somos">Quem somos</a></li>
+        </div>
+        <div class="header__navigation-menu__list__container">
+            <div class="search-bar header__navigation-menu__list__search-bar">
+                <a class="search-bar__icon header__navigation-menu__list__search-bar__icon" href="#">
+                    <iconify-icon class="iconify-icon" icon="eva:search-fill"></iconify-icon>
+                </a>
+                <input class="search-bar__txt header__navigation-menu__list__search-bar__txt" type="text"
+                       placeholder="O que deseja?">
+            </div>
+            <div class="header__navigation-menu__list__buttons">
+                <a class="accent-button header__navigation-menu__list__buttons__item" href="#">Cadastra-se</a>
+                <a class="accent-button header__navigation-menu__list__buttons__item" href="#">Entrar</a>
+            </div>
+        </div>
+        </ul>
+        </nav>
+        <div class="header__profile__container__tooltip-shopping-cart">
+            <div class="header__profile__shopping-cart">
+                <a href="#">
+                    <span>
+                        <iconify-icon class="icon-iconify" icon="entypo:shopping-cart"></iconify-icon>
+                    </span>
+                </a>
+            </div>
+            <div class="header__profile__tooltip">
+                <iconify-icon class="iconify-icon" icon="gg:profile"></iconify-icon>
+                <div class="header__profile__tooltip__text">
+                    <h1>Minha conta</h1>
+                    <ul>
+                        <li><a href="#">Editar perfil</a></li>
+                        <li><a href="#">Histórico de pedidos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="search-bar-mobile">
+            <div class="search-bar mobile header__navigation-menu__list__search-bar">
+                <a class="search-bar__icon header__navigation-menu__list__search-bar__icon" href="#">
+                    <iconify-icon class="iconify-icon" icon="eva:search-fill"></iconify-icon>
+                </a>
+                <input class="search-bar__txt header__navigation-menu__list__search-bar__txt" type="text"
+                       placeholder="O que deseja?">
+            </div>
+        </div>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>*@
+        <footer class="footer">
+            <div class="footer__container-img">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="container">
+                <h1 class="footer__title">DRAGON SUSHI</h1>
+            </div>
+            <div class="container">
+                <div class="footer__info">
+                    <div class="footer__info__links">
+                        <h2 class="footer__info__title">Links</h2>
+                        <ul class="footer__info__links__list">
+                            <li><a href="#">> Home</a></li>
+                            <li><a href="#cardapio">> Cardápio</a></li>
+                            <li><a href="#quem-somos">> Quem Somos</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__info__social">
+                        <h2 class="footer__info__title">Social</h2>
+                        <ul class="footer__info__links__list">
+                            <li><a href="#">> Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__info__address">
+                        <h2 class="footer__info__title">Endereço</h2>
+                        <ul class="footer__info__links__list">
+                            <li>R. Guiapá, 678, Villa Leopoldina,<br> São Paulo - SP.</li>
+                            <li>Telefone: (11) 3834-4111</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer__copyright">
+                <p class="footer__all-rights-reserved">
+                    Copyright © 2022 Dragon Sushi | Todos os Direitos Reservados
+                </p>
+                <p class="footer__developers">
+                    Desenvolvimento do Website: Westen
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/Content/script.js")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
